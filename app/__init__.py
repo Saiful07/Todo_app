@@ -11,10 +11,10 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     
-    # correct call to initialize extension
+    # call to initialize extension
     db.init_app(app)
     
-    # import blueprints from correct modules
+    # import blueprints from modules
     from app.routes.auth import auth_bp
     from app.routes.tasks import tasks_bp
 
